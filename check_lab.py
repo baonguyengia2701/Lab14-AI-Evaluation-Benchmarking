@@ -1,5 +1,9 @@
 import json
 import os
+import sys
+
+if sys.stdout.encoding and sys.stdout.encoding.lower() not in ("utf-8", "utf8"):
+    sys.stdout.reconfigure(encoding="utf-8")
 
 def validate_lab():
     print("🔍 Đang kiểm tra định dạng bài nộp...")
